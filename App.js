@@ -5,9 +5,14 @@ import * as firebase from "firebase";
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import { Container, Title, BodyText } from './src/styles';
+import { Provider } from 'react-redux';
+import store from './src/store/index'
 import DeckMain from './src/components/DeckMain';
-import Quiz from './src/components/Quiz';
+import Deck from './src/components/Deck';
+import Garden from './src/components/Garden';
 import Launcher from './src/views/Launcher';
+import Quiz from './src/components/Quiz';
+import QuizForm from './src/components/Quiz/QuizForm';
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -30,10 +35,19 @@ const NavStack = createStackNavigator({
     })
   },
   DeckMain: {
-      screen: DeckMain,
+    screen: DeckMain,
     },
+  Deck: {
+    screen: Deck,
+  },
   Quiz: {
     screen: Quiz,
+  },
+  QuizBlank: {
+    screen: QuizForm,
+  },
+  Garden: {
+    screen: Garden,
   },
 });
 
@@ -46,7 +60,9 @@ const MainNav = createAppContainer(NavStack);
 
 export default function App() {
   return (
-    <MainNav />
+    <Provider store={store}>
+      <MainNav />
+    </Provider>
   );
 }
 

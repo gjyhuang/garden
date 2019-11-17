@@ -26,6 +26,21 @@ export const Container = styled.View`
   justify-content: center;
 `
 
+export const SubContainer = styled.View`
+  flex: 1;
+  width: 80%;
+`
+
+export const QuestionDiv = styled.View`
+  flex: 1;
+  text-align: center;
+  margin-top: 20px;
+  height: 100%;
+  padding: 5px;
+`
+
+// background-color: #F35001;
+
 export const Title = styled.Text`
   color: #ffffff;
   font-size: 40;
@@ -38,10 +53,40 @@ export const TitleH2 = styled.Text`
   font-family: 'sans-serif-thin';
 `
 
-export const BodyText = styled.Text`
+export const Header = styled.Text`
+  color: #ffffff;
+  font-family: 'sans-serif';
+  font-size: 30;
+`
+
+export const TitleQuestion = styled.Text`
+  color: #ffffff;
+  font-size: 20;
+  font-family: 'normal';
+`
+
+export const SubheaderText = styled.Text`
   color: #ffffff;
   font-size: 20;
   font-family: 'sans-serif-thin';
+`
+
+export const SubmitAnswer = styled.Text`
+  color: #ffffff;
+  font-size: 20;
+  font-family: 'normal';
+  align-self: center;
+`
+
+export const BodyText = styled.Text`
+  color: #ffffff;
+  font-size: 14;
+  font-family: 'normal';
+  text-align: justify;
+`
+
+export const HalfDivider = styled.View`
+  height: 10px;
 `
 
 export const Divider = styled.View`
@@ -54,3 +99,7 @@ export const OrangeButton = styled.Button`
   border: solid 2px #FEAF17;
   margin: 0.5rem;
 `
+
+// export const QuizBlankField = styled.field`
+//   color: #ffffff;
+// `

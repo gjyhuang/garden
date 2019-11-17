@@ -17,7 +17,7 @@ export async function addFlashcards(card, addComplete) {
 }
 
 export async function getFlashcards(cardsRetrieved){
-
+  const deck = [];
 
   const snapshot = await firebase.firestore()
   .collection('Flashcards-World-Capitals')
@@ -25,6 +25,10 @@ export async function getFlashcards(cardsRetrieved){
   .get()
 
   snapshot.forEach((doc) => {
-
+    const card = doc.data();
+    card.id = doc.id;
+    deck.push(card);
   })
+
+  cardsRetrieved(deck);
 }
