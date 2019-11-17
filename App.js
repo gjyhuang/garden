@@ -13,6 +13,8 @@ import Garden from './src/components/Garden';
 import Launcher from './src/views/Launcher';
 import Quiz from './src/components/Quiz';
 import QuizForm from './src/components/Quiz/QuizForm';
+import Card from './src/components/Flashcards/Card';
+import setLocalNotification from './src/notifs';
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -49,21 +51,26 @@ const NavStack = createStackNavigator({
   Garden: {
     screen: Garden,
   },
+  Card: {
+    screen: Card,
+  }
 });
 
 const MainNav = createAppContainer(NavStack);
 
-// export default createAppContainer(
+export default class App extends React.Component {
 
+  componentDidMount(){
+    // setLocalNotification()
+  }
 
-// );
-
-export default function App() {
-  return (
-    <Provider store={store}>
-      <MainNav />
-    </Provider>
-  );
+  render() {
+    return (
+      <Provider store={store}>
+        <MainNav />
+      </Provider>
+    );
+  }
 }
 
 

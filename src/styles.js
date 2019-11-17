@@ -31,6 +31,14 @@ export const SubContainer = styled.View`
   width: 80%;
 `
 
+export const ButtonWrap = styled.View`
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #018C96;
+  align-items: center;
+  justify-content: center;
+  `
+
 export const QuestionDiv = styled.View`
   flex: 1;
   text-align: center;
