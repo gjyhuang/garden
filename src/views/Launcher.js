@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Title, SubheaderText, OrangeButton, Divider } from '../styles';
+import { Button } from 'react-native';
+import { Container, Title, SubheaderText, OrangeButton, ButtonText, Divider, styles } from '../styles';
 
 class Launcher extends Component {
   render() {
@@ -9,12 +10,14 @@ class Launcher extends Component {
         <SubheaderText>What would you like to grow?</SubheaderText>
         <Divider />
         <OrangeButton
-          onPress={() => this.props.navigation.navigate('DeckMain')}
-          title='My Flashcards' />
+          onPress={() => this.props.navigation.navigate('DeckMain')}>
+          <ButtonText>My Flashcards</ButtonText>
+        </OrangeButton>
         <Divider />
         <OrangeButton
-          onPress={() => this.props.navigation.navigate('Garden')}
-          title='My garden' />
+          onPress={() => this.props.navigation.navigate('Garden')}>
+          <ButtonText>My garden</ButtonText>
+        </OrangeButton>
       </Container>
     );
   }

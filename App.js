@@ -12,7 +12,7 @@ import Deck from './src/components/Deck';
 import Garden from './src/components/Garden';
 import Launcher from './src/views/Launcher';
 import Quiz from './src/components/Quiz';
-import QuizForm from './src/components/Quiz/QuizForm';
+import QuizFormWrapper from './src/components/Quiz/QuizFormWrapper';
 import Card from './src/components/Flashcards/Card';
 import setLocalNotification from './src/notifs';
 
@@ -46,7 +46,7 @@ const NavStack = createStackNavigator({
     screen: Quiz,
   },
   QuizBlank: {
-    screen: QuizForm,
+    screen: QuizFormWrapper,
   },
   Garden: {
     screen: Garden,

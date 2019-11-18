@@ -2,13 +2,14 @@ import React from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { ScrollView, Text, TouchableOpacity } from 'react-native';
 import QuizFormInput from './QuizFormInput';
-import { Container, TitleQuestion, SubmitAnswer, Divider, HalfDivider } from '../../styles';
+import { Container, TitleQuestion, SubmitAnswer, Divider, HalfDivider, QuestionDiv } from '../../styles';
 
 const QuizForm = (props) => {
+  const { capital, country } = props;
   return (
-    <Container>
       <ScrollView keyboardShouldPersistTaps={'handled'}>
-        <TitleQuestion>Question:</TitleQuestion>
+        <QuestionDiv>
+        <TitleQuestion>What is the capital of {country}?</TitleQuestion>
         <HalfDivider />
         <Field
           name={'answer'}
@@ -18,8 +19,8 @@ const QuizForm = (props) => {
         <HalfDivider />
           <SubmitAnswer>Submit!</SubmitAnswer>
         </TouchableOpacity>
+        </QuestionDiv>
       </ScrollView>
-    </Container>
     );
   };
 

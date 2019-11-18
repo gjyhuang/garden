@@ -12,9 +12,14 @@ export default class Card extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e) {
-    e.preventDefault();
-    this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+  handleClick(evt) {
+    evt.preventDefault();
+    if (!this.props.isFlipping) {
+      this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+    }
+    else {
+      this.setState({isFlipped: false})
+    }
   }
 
   render() {

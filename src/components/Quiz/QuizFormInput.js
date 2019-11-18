@@ -7,6 +7,7 @@
         <TextInput style={{
           borderWidth: 2,
           borderColor: '#ffffff',
+          color: '#ffffff',
           padding: 5,
           width: 200,
         }}

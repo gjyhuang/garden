@@ -5,9 +5,10 @@ import {
   SafeAreaView,
   Text,
   View,
+  Button,
 } from 'react-native';
 import { ListItem } from 'react-native-elements';
-import { Container, TitleH2, BodyText, OrangeButton, Divider, ButtonWrap } from '../styles';
+import { Container, TitleH2, BodyText, OrangeButton, Divider, ButtonWrap, ButtonText } from '../styles';
 
 class DeckMain extends Component {
 
@@ -18,12 +19,14 @@ class DeckMain extends Component {
         <Divider />
         <ButtonWrap>
           <OrangeButton
-            onPress={() => this.props.navigation.navigate('Deck')}
-            title='World Capitals' />
+            onPress={() => this.props.navigation.navigate('Deck')}>
+              <ButtonText>World Capitals</ButtonText>
+          </OrangeButton>
           <OrangeButton
-            onPress={() => this.props.navigation.navigate('Quiz')}
-            title='Quiz me!' />
-          </ButtonWrap>
+            onPress={() => this.props.navigation.navigate('Quiz')}>
+              <ButtonText>Quiz me!</ButtonText>
+          </OrangeButton>
+        </ButtonWrap>
       </Container>
     )
   }
